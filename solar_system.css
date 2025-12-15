@@ -1,0 +1,119 @@
+body {
+ background-color:rgb(255, 255, 255);
+ text-align: center;
+}
+.card {
+  background-color: lightblue;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: auto;
+  min-height: 150px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow:none ;
+  border-radius: 10px;
+  text-align: center;
+}
+.planet-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.planet-box {
+  background: #0b0b0b;
+  border: 1px solid #222;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1;
+  min-width: 250px;
+}
+
+.planet-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(79, 195, 247, 0.5);
+}
+
+.planet-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.planet-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.planet-box h3 {
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  flex: 1;
+  text-align: right;
+}
+
+/* تصميم متجاوب للجوال */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 95%;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .planet-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .planet-box {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .planet-box img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .planet-box h3 {
+    font-size: 16px;
+  }
+}
+
+/* تصميم للشاشات الكبيرة */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .planet-nav {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .planet-box {
+    max-width: 280px;
+  }
+}
+
+/* تصميم للشاشات الكبيرة جداً */
+@media screen and (min-width: 1025px) {
+  .planet-nav {
+    justify-content: space-between;
+  }
+}
